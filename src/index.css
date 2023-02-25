@@ -4,6 +4,11 @@
 
 @layer base {
   :root {
+    /* Colors */
+    --color-bg-navbar: #fff7ed;
+    --color-bg-footer: #252525;
+    --color-bg-accent: #ff8c38;
+    --color-bg-about-cta: #ffcc8d;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
@@ -19,21 +24,34 @@
     -webkit-text-size-adjust: 100%;
   }
 
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
   a {
     font-weight: 500;
-    color: #646cff;
+    color: #4d4d4d;
     text-decoration: inherit;
   }
+
   a:hover {
     color: #535bf2;
   }
 
   body {
-    margin: 0;
-    display: flex;
-    place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
+    background-color: #fff7ed;
+    color: #161616;
+    height: 100%;
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
   }
 
   h1 {
@@ -41,7 +59,16 @@
     line-height: 1.1;
   }
 
-  button {
+  .home-container {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('./assets/images/home-hero.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  /* button {
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
@@ -58,9 +85,9 @@
   button:focus,
   button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
-  }
+  } */
 
-  @media (prefers-color-scheme: light) {
+  /* @media (prefers-color-scheme: light) {
     :root {
       color: #213547;
       background-color: #ffffff;
@@ -71,5 +98,5 @@
     button {
       background-color: #f9f9f9;
     }
-  }
+  } */
 }
