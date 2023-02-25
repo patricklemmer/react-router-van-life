@@ -3,7 +3,7 @@ import React from 'react';
 function Vans() {
   return (
     <div>
-      <h1>Vans</h1>
+      <h1>Vans page goes here</h1>
     </div>
   );
 }
