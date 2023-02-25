@@ -8,7 +8,7 @@ import bgImg from '../assets/images/about-hero.jpg';
 
 function About() {
   return (
-    <div>
+    <div className="pb-12">
       <img src={bgImg} alt="About page Hero image" />
       <section className="w-3/4 mx-auto grid gap-6 py-12 px-2 mb-4 text-left xxs:mb-2 xs:px-4 xs:max-w-screen-md">
         <h1 className="text-3xl font-extrabold leading-7 sm:text-4xl">
