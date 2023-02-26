@@ -12,6 +12,9 @@ import Vans from './pages/Vans';
 // Stylesheet imports
 import './index.css';
 
+// Data imports
+import './server';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
