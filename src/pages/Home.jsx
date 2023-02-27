@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 function Home() {
   return (
-    <div className="home-container pt-6 pb-10 px-4 text-left text-white min-h-[500px] xxs:pt-8 xxs:pb-12 xxs:px-8 sm:pt-10 sm:pb-14 sm:px-10">
+    <div className="home-container pt-6 pb-10 px-4 text-left text-white min-h-screen xxs:pt-8 xxs:pb-12 xxs:px-8 sm:pt-10 sm:pb-14 sm:px-10">
       <section className="grid gap-4 sm:max-w-2xl sm:mx-auto">
         <h1 className="font-extrabold text-xl tracking-wider xxs:text-2xl sm:text-4xl">
           You got the travel plans, we got the travel vans.

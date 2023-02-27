@@ -2,17 +2,6 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    // extend: {
-    //   backgroundColor: {
-    //     skin: {
-    //       // Background color
-    //       'bg-nav': 'var(--color-bg-navbar)',
-    //       'bg-footer': 'var(--color-bg-footer)',
-    //       'bg-accent': 'var(--color-bg-accent)',
-    //       'bg-about-cta': 'var(--color-bg-about-cta)',
-    //     },
-    //   },
-    // },
     screens: {
       xxs: '350px',
       xs: '480px',

@@ -64,7 +64,67 @@ createServer({
         "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
       imageUrl:
         'https://assets.scrimba.com/advanced-react/react-router/green-wonder.png',
+      type: 'simple',
+    });
+    server.create('van', {
+      id: '7',
+      name: 'Green Wonder',
+      price: 110,
+      description:
+        "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
+      imageUrl:
+        'https://assets.scrimba.com/advanced-react/react-router/green-wonder.png',
       type: 'rugged',
+    });
+    server.create('van', {
+      id: '8',
+      name: 'Adventurer',
+      price: 65,
+      description:
+        "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
+      imageUrl:
+        'https://assets.scrimba.com/advanced-react/react-router/green-wonder.png',
+      type: 'luxury',
+    });
+    server.create('van', {
+      id: '9',
+      name: 'Sky Rider',
+      price: 90,
+      description:
+        "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
+      imageUrl:
+        'https://assets.scrimba.com/advanced-react/react-router/green-wonder.png',
+      type: 'rugged',
+    });
+    server.create('van', {
+      id: '10',
+      name: 'Wilderness Home',
+      price: 100,
+      description:
+        "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
+      imageUrl:
+        'https://assets.scrimba.com/advanced-react/react-router/green-wonder.png',
+      type: 'luxury',
+    });
+    server.create('van', {
+      id: '11',
+      name: 'Starlight',
+      price: 80,
+      description:
+        "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
+      imageUrl:
+        'https://assets.scrimba.com/advanced-react/react-router/green-wonder.png',
+      type: 'rugged',
+    });
+    server.create('van', {
+      id: '12',
+      name: 'Backcountry Master',
+      price: 85,
+      description:
+        "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
+      imageUrl:
+        'https://assets.scrimba.com/advanced-react/react-router/green-wonder.png',
+      type: 'simple',
     });
   },
 
