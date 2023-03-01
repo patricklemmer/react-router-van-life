@@ -14,18 +14,18 @@ function Vans() {
 
   const vanElements = vans.map((van) => {
     return (
-      <div className="van-card grid justify-items-start">
-        <Link key={van.id} to={`/vans/${van.id}/${van.name}`}>
+      <div key={van.id} className="van-card grid justify-items-start">
+        <Link to={`/vans/${van.id}/${van.name}`}>
           <img src={van.imageUrl} alt="Van image" className="rounded-md mb-2" />
           <div className="grid justify-items-start gap-2 mb-1">
             <h3 className="font-bold xxs:text-lg xs:text-xl">{van.name}</h3>
             <p className="text-[0.9rem] xxs:text-base xs:text-lg">
               {van.price}€<span>/day</span>
             </p>
+            <i className={`van-type ${van.type} selected text-sm text-left`}>
+              {van.type}
+            </i>
           </div>
-          <i className={`van-type ${van.type} selected text-sm text-left`}>
-            {van.type}
-          </i>
         </Link>
       </div>
     );
