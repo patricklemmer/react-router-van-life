@@ -19,6 +19,7 @@ import HostVanDetail from './pages/Host/HostVanDetail';
 import HostVanInfo from './pages/Host/HostVanInfo';
 import HostVanPhotos from './pages/Host/HostVanPhotos';
 import HostVanPricing from './pages/Host/HostVanPricing';
+import NotFound from './pages/NotFound';
 
 // Component imports
 import Layout from './components/Layout';
@@ -48,10 +49,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="vans" element={<HostVans />} />
             <Route path="vans/:id" element={<HostVanDetail />}>
               <Route index element={<HostVanInfo />} />
-              <Route path="photos" element={<HostVanPhotos />} />
               <Route path="pricing" element={<HostVanPricing />} />
+              <Route path="photos" element={<HostVanPhotos />} />
             </Route>
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
