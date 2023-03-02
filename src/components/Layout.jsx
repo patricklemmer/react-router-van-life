@@ -9,9 +9,9 @@ import Footer from './Footer';
 
 function Layout() {
   return (
-    <div className="min-h-full flex flex-col">
+    <div className="h-full flex flex-col">
       <Header />
-      <main className="">
+      <main>
         <Outlet />
       </main>
       <Footer />
