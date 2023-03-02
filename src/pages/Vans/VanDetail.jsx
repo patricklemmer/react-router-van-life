@@ -1,10 +1,11 @@
 // Imports
 // React imports
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 
 function VanDetail() {
   const params = useParams();
+  const location = useLocation();
   const [van, setVan] = useState(null);
 
   useEffect(() => {
@@ -13,8 +14,18 @@ function VanDetail() {
       .then((data) => setVan(data.vans));
   }, [params.id]);
 
+  const search = location.state?.search || '';
+  const type = location.state?.type || 'all';
+
   return (
     <div className="van-detail-container">
+      <Link
+        to={`../..${search}`}
+        relative="path"
+        className="back-button flex justify-start"
+      >
+        &larr; <span>Back to {type} vans</span>
+      </Link>
       {van ? (
         <div className="py-6 px-3 flex flex-col sm:max-w-2xl sm:mx-auto">
           <img src={van.imageUrl} className="rounded-md mb-6" />

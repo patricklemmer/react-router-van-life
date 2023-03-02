@@ -11,11 +11,7 @@ function HostVans() {
   }, []);
 
   const hostVansEls = vans.map((van) => (
-    <Link
-      to={`/host/vans/${van.id}`}
-      key={van.id}
-      className="host-van-link-wrapper"
-    >
+    <Link to={van.id} key={van.id} className="host-van-link-wrapper">
       <div
         className="host-van-single p-4 my-10 mx-4 bg-white rounded-md border border-neutral-100 grid gap-4 xs:flex xs:my-6 xs:mx-12 sm:max-w-xl sm:mx-auto"
         key={van.id}
