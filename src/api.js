@@ -7,6 +7,7 @@ export async function getVans() {
       status: response.status,
     };
   }
+
   const data = await response.json();
   return data.vans;
 }

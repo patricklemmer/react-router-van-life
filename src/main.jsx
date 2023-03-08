@@ -29,6 +29,7 @@ import NotFound from './pages/NotFound';
 // Component imports
 import Layout from './components/Layout';
 import HostLayout from './components/HostLayout';
+import Error from './components/Error';
 
 // Stylesheet imports
 import './index.css';
@@ -44,7 +45,12 @@ const router = createBrowserRouter(
       {/* About page */}
       <Route path="about" element={<About />} />
       {/* Vans page */}
-      <Route path="vans" element={<Vans />} loader={vansLoader} />
+      <Route
+        path="vans"
+        element={<Vans />}
+        errorElement={<Error />}
+        loader={vansLoader}
+      />
       <Route path="vans/:id/:name" element={<VanDetail />} />
 
       {/* Host Page Navigation */}
@@ -63,7 +69,6 @@ const router = createBrowserRouter(
     </Route>
   )
 );
-console.log(router);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

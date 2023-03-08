@@ -1,6 +1,6 @@
 // Imports
 // React imports
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useSearchParams, useLoaderData } from 'react-router-dom';
 
 // Other imports
