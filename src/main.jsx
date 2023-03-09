@@ -13,6 +13,7 @@ import {
 // Van pages
 import Home from './pages/Home';
 import About from './pages/About';
+import Login from './pages/Login';
 import Vans, { loader as vansLoader } from './pages/Vans/Vans';
 import VanDetail from './pages/Vans/VanDetail';
 //Host pages
@@ -29,6 +30,7 @@ import NotFound from './pages/NotFound';
 // Component imports
 import Layout from './components/Layout';
 import HostLayout from './components/HostLayout';
+import AuthRequired from './components/AuthRequired';
 import Error from './components/Error';
 
 // Stylesheet imports
@@ -44,6 +46,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       {/* About page */}
       <Route path="about" element={<About />} />
+      <Route path="login" element={<Login />} />
       {/* Vans page */}
       <Route
         path="vans"
@@ -53,16 +56,18 @@ const router = createBrowserRouter(
       />
       <Route path="vans/:id/:name" element={<VanDetail />} />
 
-      {/* Host Page Navigation */}
-      <Route path="host" element={<HostLayout />}>
-        <Route index element={<Dashboard />} />
-        <Route path="income" element={<Income />} />
-        <Route path="reviews" element={<Reviews />} />
-        <Route path="vans" element={<HostVans />} />
-        <Route path="vans/:id" element={<HostVanDetail />}>
-          <Route index element={<HostVanInfo />} />
-          <Route path="pricing" element={<HostVanPricing />} />
-          <Route path="photos" element={<HostVanPhotos />} />
+      <Route element={<AuthRequired />}>
+        {/* Host Page Navigation */}
+        <Route path="host" element={<HostLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="income" element={<Income />} />
+          <Route path="reviews" element={<Reviews />} />
+          <Route path="vans" element={<HostVans />} />
+          <Route path="vans/:id" element={<HostVanDetail />}>
+            <Route index element={<HostVanInfo />} />
+            <Route path="pricing" element={<HostVanPricing />} />
+            <Route path="photos" element={<HostVanPhotos />} />
+          </Route>
         </Route>
       </Route>
       <Route path="*" element={<NotFound />} />

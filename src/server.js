@@ -145,8 +145,8 @@ createServer({
     this.logging = false;
 
     this.get('/vans', (schema, request) => {
-      return new Response(400, {}, { error: 'Error fetching vans' });
-      // return schema.vans.all();
+      // return new Response(400, {}, { error: 'Error fetching vans' });
+      return schema.vans.all();
     });
 
     this.get('/vans/:id', (schema, request) => {

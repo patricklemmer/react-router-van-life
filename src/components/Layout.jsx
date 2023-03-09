@@ -9,12 +9,16 @@ import Footer from './Footer';
 
 function Layout() {
   return (
-    <div className="h-full flex flex-col">
-      <Header />
-      <main>
+    <div className="flex flex-col">
+      <header>
+        <Header />
+      </header>
+      <main className="grow border-4 border-blue-500">
         <Outlet />
       </main>
-      <Footer />
+      <footer className="border-4 border-red-500">
+        <Footer />
+      </footer>
     </div>
   );
 }

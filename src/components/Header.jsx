@@ -3,6 +3,9 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
+// Icon imports
+import { BiUserCircle } from 'react-icons/bi';
+
 function Header() {
   return (
     <header className="w-full grid gap-4 py-8 sm:flex sm:max-w-4xl sm:mx-auto sm:py-14 sm:px-8 sm:items-center">
@@ -31,6 +34,9 @@ function Header() {
         >
           Vans
         </NavLink>
+        <Link to="login">
+          <BiUserCircle />
+        </Link>
       </nav>
     </header>
   );

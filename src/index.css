@@ -37,8 +37,8 @@
     background-color: #fff7ed;
     color: #161616;
     /* width: 100vw;
-    height: 100%;
     margin: 0 auto; */
+    min-height: 600px;
     text-align: center;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -52,10 +52,6 @@
   *::before,
   *::after {
     box-sizing: inherit;
-  }
-
-  body::-webkit-scrollbar {
-    display: none;
   }
 
   a.active-link {
