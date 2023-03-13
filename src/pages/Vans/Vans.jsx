@@ -1,6 +1,6 @@
 // Imports
 // React imports
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import {
   Link,
   useSearchParams,
@@ -117,7 +117,9 @@ function Vans() {
       <h1 className="text-left font-extrabold text-lg mb-6 xxs:text-xl xs:text-2xl xs:mb-7 sm:text-4xl sm:mb-10">
         Explore our van options
       </h1>
-      <Await resolve={dataPromise.vans}>{renderVanElements}</Await>
+      <Suspense fallback={<h2>Loading vans...</h2>}>
+        <Await resolve={dataPromise.vans}>{renderVanElements}</Await>
+      </Suspense>
     </div>
   );
 }
