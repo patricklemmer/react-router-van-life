@@ -15,7 +15,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Login, { action as loginAction } from './pages/Login';
 import Vans, { loader as vansLoader } from './pages/Vans/Vans';
-import VanDetail from './pages/Vans/VanDetail';
+import VanDetail, { loader as vanDetailLoader } from './pages/Vans/VanDetail';
 //Host pages
 import Dashboard from './pages/Host/Dashboard';
 import Income from './pages/Host/Income';
@@ -54,7 +54,11 @@ const router = createBrowserRouter(
         errorElement={<Error />}
         loader={vansLoader}
       />
-      <Route path="vans/:id/:name" element={<VanDetail />} />
+      <Route
+        path="vans/:id/:name"
+        element={<VanDetail />}
+        loader={vanDetailLoader}
+      />
 
       <Route element={<AuthRequired />}>
         {/* Host Page Navigation */}
