@@ -17,7 +17,7 @@ import Login, { action as loginAction } from './pages/Login';
 import Vans, { loader as vansLoader } from './pages/Vans/Vans';
 import VanDetail, { loader as vanDetailLoader } from './pages/Vans/VanDetail';
 //Host pages
-import Dashboard from './pages/Host/Dashboard';
+import Dashboard, { loader as dashboardLoader } from './pages/Host/Dashboard';
 import Income from './pages/Host/Income';
 import Reviews from './pages/Host/Reviews';
 import HostVans, { loader as hostVansLoader } from './pages/Host/HostVans';
@@ -66,7 +66,12 @@ const router = createBrowserRouter(
       <Route element={<AuthRequired />}>
         {/* Host Page Navigation */}
         <Route path="host" element={<HostLayout />}>
-          <Route index element={<Dashboard />} />
+          <Route
+            index
+            element={<Dashboard />}
+            errorElement={<Error />}
+            loader={dashboardLoader}
+          />
           <Route path="income" element={<Income />} />
           <Route path="reviews" element={<Reviews />} />
           <Route

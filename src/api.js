@@ -1,15 +1,19 @@
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(() => resolve(), ms));
+}
+
 export async function getVans(id) {
+  // await sleep(1000)
   const url = id ? `/api/vans/${id}` : '/api/vans';
-  const response = await fetch(url);
-  if (!response.ok) {
+  const res = await fetch(url);
+  if (!res.ok) {
     throw {
       message: 'Failed to fetch vans',
-      statusText: response.statusText,
-      status: response.status,
+      statusText: res.statusText,
+      status: res.status,
     };
   }
-
-  const data = await response.json();
+  const data = await res.json();
   return data.vans;
 }
 
