@@ -1,13 +1,13 @@
 // Imports
 // React imports
 import React, { useState } from 'react';
-import { Link, useSearchParams, useLoaderData } from 'react-router-dom';
+import { Link, useSearchParams, useLoaderData, defer } from 'react-router-dom';
 
 // Other imports
 import { getVans } from '../../api';
 
 export function loader() {
-  return getVans();
+  return defer({ vans: getVans() });
 }
 
 function Vans() {

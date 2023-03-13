@@ -13,7 +13,7 @@ import {
 // Van pages
 import Home from './pages/Home';
 import About from './pages/About';
-import Login from './pages/Login';
+import Login, { action as loginAction } from './pages/Login';
 import Vans, { loader as vansLoader } from './pages/Vans/Vans';
 import VanDetail from './pages/Vans/VanDetail';
 //Host pages
@@ -46,7 +46,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       {/* About page */}
       <Route path="about" element={<About />} />
-      <Route path="login" element={<Login />} />
+      <Route path="login" element={<Login />} action={loginAction} />
       {/* Vans page */}
       <Route
         path="vans"
