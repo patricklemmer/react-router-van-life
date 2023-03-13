@@ -1,6 +1,6 @@
 // Imports
 // React imports
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import {
   Link,
   useLocation,
@@ -19,7 +19,6 @@ export function loader({ params }) {
 function VanDetail() {
   const location = useLocation();
   const loaderData = useLoaderData();
-  const [van, setVan] = useState(null);
 
   const search = location.state?.search || '';
   const type = location.state?.type || 'all';
