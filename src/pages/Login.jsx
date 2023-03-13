@@ -1,6 +1,6 @@
 // Imports
 // React imports
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   useLocation,
   useNavigate,
@@ -36,9 +36,11 @@ function Login() {
   const data = useActionData();
   const from = location.state?.from || '/host';
 
-  if (data?.token) {
-    navigate(from, { replace: true });
-  }
+  useEffect(() => {
+    if (data?.token) {
+      navigate(from, { replace: true });
+    }
+  }, [data]);
 
   return (
     <div className="border-4 border-green-400 pb-96">
