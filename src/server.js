@@ -75,7 +75,7 @@ createServer({
     });
     server.create('van', {
       id: '7',
-      name: 'Green Wonder',
+      name: 'Blue Wonder',
       price: 110,
       description:
         "With this van, you can take your travel life to the next level. The Green Wonder is a sustainable vehicle that's perfect for people who are looking for a stylish, eco-friendly mode of transport that can go anywhere.",
@@ -149,6 +149,7 @@ createServer({
 
   routes() {
     this.namespace = 'api';
+    this.passthrough('https://firestore.googleapis.com/**');
     this.logging = false;
 
     this.get('/vans', (schema, request) => {

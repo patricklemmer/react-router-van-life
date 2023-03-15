@@ -11,10 +11,10 @@ import {
 } from 'react-router-dom';
 
 // Data import
-import { getHostVans } from '../../api';
+import { getVan } from '../../api/firebase';
 
 export function loader({ params }) {
-  return defer({ van: getHostVans(params.id) });
+  return defer({ van: getVan(params.id) });
 }
 
 function HostVanDetail() {

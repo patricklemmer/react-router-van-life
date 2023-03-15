@@ -10,10 +10,11 @@ import {
 } from 'react-router-dom';
 
 // Other imports
-import { getVans } from '../../api';
+// import { getVans } from '../../api';
+import { getAllVans } from '../../api/firebase';
 
 export function loader() {
-  return defer({ vans: getVans() });
+  return defer({ vans: getAllVans() });
 }
 
 function Vans() {
