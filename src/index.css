@@ -36,9 +36,6 @@
   body {
     background-color: #fff7ed;
     color: #161616;
-    /* width: 100vw;
-    margin: 0 auto; */
-    min-height: 600px;
     text-align: center;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -59,6 +56,14 @@
     text-decoration: underline;
   }
 
+  .header {
+    min-height: 10vh;
+  }
+
+  .footer {
+    min-height: 5vh;
+  }
+
   .home-container {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)),
       url('./assets/images/home-hero.jpg') no-repeat center center;
@@ -66,6 +71,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 85vh;
   }
 
   .van-type {

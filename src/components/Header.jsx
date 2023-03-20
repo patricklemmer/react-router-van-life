@@ -13,14 +13,14 @@ function Header() {
   }
 
   return (
-    <header className="w-full grid gap-4 py-8 sm:flex sm:max-w-4xl sm:mx-auto sm:py-14 sm:px-8 sm:items-center">
+    <header className="header w-full grid gap-4 py-8 sm:flex sm:max-w-4xl sm:mx-auto sm:py-14 sm:px-8 sm:items-center">
       <Link
         to="/"
         className="text-lg uppercase font-extrabold tracking-widest xs:text-xl sm:text-2xl sm:mr-auto sm:px-6"
       >
         #Vanlife
       </Link>
-      <nav className="flex justify-center items-center gap-4 font-bold text-neutral-500 xs:text-lg xs:gap-6 sm:px-6">
+      <nav className="flex justify-center items-center flex-wrap px-2 gap-3 font-bold text-neutral-500 xs:text-lg xs:gap-6 sm:px-6">
         <NavLink
           to="/host"
           className={({ isActive }) => (isActive ? 'active-link' : null)}

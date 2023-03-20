@@ -10,13 +10,13 @@ import Footer from './Footer';
 function Layout() {
   return (
     <div className="flex flex-col">
-      <header>
+      <header className="grow-0">
         <Header />
       </header>
-      <main className="grow border-4 border-blue-500">
+      <main className="grow">
         <Outlet />
       </main>
-      <footer className="border-4 border-red-500">
+      <footer className="grow-0">
         <Footer />
       </footer>
     </div>
