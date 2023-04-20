@@ -29,24 +29,30 @@ function HostVanDetail() {
 
   return (
     <section className="p-4 grid">
-      <Link to=".." relative="path" className="back-button flex justify-start">
-        &larr; <span>Back to all vans</span>
+      <Link
+        to=".."
+        relative="path"
+        className="back-button flex justify-start font-bold ml-4 mb-4 sm:ml-12 sm:mb-12"
+      >
+        &larr; <span className="ml-2">Back to all vans</span>
       </Link>
 
       <Suspense fallback={<h2>Loading...</h2>}>
         <Await resolve={loaderData.van}>
           {(currentVan) => (
-            <div className="host-van-detail-layout-container">
-              <div className="host-van-detail flex">
-                <img src={currentVan.imageUrl} className="w-1/2" />
-                <div className="host-van-detail-info-text">
-                  <i className={`van-type van-type-${currentVan.type}`}>
-                    {currentVan.type}
-                  </i>
-                  <h3>{currentVan.name}</h3>
-                  <h4>{currentVan.price}€/day</h4>
-                </div>
-              </div>
+            <div className=" py-6 px-3 flex flex-col max-w-3xl mx-auto sm:px-6 lg:px-8">
+              <img src={currentVan.imageUrl} className="rounded-md mb-6" />
+              <i
+                className={`van-type van-type-${currentVan.type} mb-6 max-w-[100px] sm:max-w-[200px]`}
+              >
+                {currentVan.type}
+              </i>
+              <h3 className="text-xl font-bold text-left mb-4">
+                {currentVan.name}
+              </h3>
+              <h4 className="van-price text-left mb-3">
+                <span className="font-bold">{currentVan.price}€</span>/day
+              </h4>
 
               <nav className="mt-6 mb-4 grid gap-2 items-center justify-start text-sm opacity-80 xxs:flex xxs:gap-4 sm:gap-10 sm:max-w-xl sm:mx-auto">
                 <NavLink
