@@ -69,7 +69,7 @@ function Vans() {
     });
     return (
       <>
-        <div className="flex flex-wrap gap-2 text-sm justify-center mb-6">
+        <div className="flex flex-wrap gap-2 text-sm justify-start mb-12">
           <button
             onClick={() => handleFilterChange('type', 'simple')}
             className={`van-type simple ${
@@ -96,7 +96,10 @@ function Vans() {
           </button>
           {/* Renders "Clear filter" btn only of any filter is currently applied */}
           {typeFilter ? (
-            <button onClick={() => handleFilterChange('type', null)}>
+            <button
+              onClick={() => handleFilterChange('type', null)}
+              className="font-bold"
+            >
               Clear filter
             </button>
           ) : null}
@@ -109,8 +112,8 @@ function Vans() {
   }
 
   return (
-    <div className="pt-8 pb-12 px-5 sm:pt-16 sm:max-w-4xl sm:mx-auto">
-      <h1 className="text-left font-extrabold text-lg mb-6 xxs:text-xl xs:text-2xl xs:mb-7 sm:text-4xl sm:mb-10">
+    <div className="pt-4 pb-12 px-5 sm:pt-16 sm:max-w-4xl sm:mx-auto">
+      <h1 className="text-left font-extrabold text-lg pb-12 xxs:text-xl xs:text-2xl xs:mb-7 sm:text-4xl sm:mb-10">
         Explore our van options
       </h1>
       <Suspense fallback={<h2>Loading vans...</h2>}>
