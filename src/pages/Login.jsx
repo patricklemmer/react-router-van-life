@@ -44,10 +44,12 @@ function Login() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <div className="bg-white border border-gray-200 rounded-md shadow-md p-8 space-y-4 w-full max-w-sm">
+      <div className="bg-white border border-gray-200 rounded-md shadow-md p-6 space-y-4 w-full max-w-sm">
         {/* Renders message if user comes from anywhere other than /login */}
         {location.state?.message && (
-          <h3 className="font-bold text-xl py-8">{location.state.message}</h3>
+          <h3 className="font-bold text-xl text-red-600 py-2">
+            {location.state.message}
+          </h3>
         )}
 
         <h1 className="font-bold pb-4 text-center text-xl sm:text-2xl">
