@@ -24,32 +24,32 @@ function Reviews() {
   ];
 
   return (
-    <section className="">
-      <div className="flex">
-        <h2>Your reviews</h2>
+    <section class="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+      <div class="flex flex-col justify-center items-center xs:justify-between mb-6 xs:flex-row">
+        <h2 class="text-2xl font-bold">Your reviews</h2>
         <p>
-          Last <span>30 days</span>
+          Last <span class="font-bold">30 days</span>
         </p>
       </div>
       <img
-        className=""
+        class="mx-auto mb-8"
         src="../src/assets/images/reviews-graph.png"
         alt="Review graph"
       />
-      <h3>Reviews (2)</h3>
+      <h3 class="text-xl font-bold mb-4">Reviews (2)</h3>
       {reviewsData.map((review) => (
-        <div key={review.id}>
-          <div className="">
+        <div key={review.id} class="mb-8">
+          <div class="flex items-center mb-2">
             {[...Array(review.rating)].map((_, i) => (
-              <BsStarFill className="" key={i} />
+              <BsStarFill class="text-yellow-500" key={i} />
             ))}
-            <div className="">
-              <p className="">{review.name}</p>
-              <p className="">{review.date}</p>
+            <div class="ml-4 flex items-center gap-4">
+              <p class="font-bold">{review.name}</p>
+              <p class="text-gray-600">{review.date}</p>
             </div>
-            <p>{review.text}</p>
           </div>
-          <hr />
+          <p class="mb-4 text-left">{review.text}</p>
+          <hr class="border-gray-300" />
         </div>
       ))}
     </section>
@@ -57,3 +57,35 @@ function Reviews() {
 }
 
 export default Reviews;
+
+{
+  /* <section className="">
+<div className="flex">
+  <h2>Your reviews</h2>
+  <p>
+    Last <span>30 days</span>
+  </p>
+</div>
+<img
+  className=""
+  src="../src/assets/images/reviews-graph.png"
+  alt="Review graph"
+/>
+<h3>Reviews (2)</h3>
+{reviewsData.map((review) => (
+  <div key={review.id}>
+    <div className="">
+      {[...Array(review.rating)].map((_, i) => (
+        <BsStarFill className="" key={i} />
+      ))}
+      <div className="">
+        <p className="">{review.name}</p>
+        <p className="">{review.date}</p>
+      </div>
+      <p>{review.text}</p>
+    </div>
+    <hr />
+  </div>
+))}
+</section> */
+}
