@@ -54,7 +54,7 @@ function HostVanDetail() {
                 <span className="font-bold">{currentVan.price}€</span>/day
               </h4>
 
-              <nav className="mt-6 mb-4 grid gap-2 items-center justify-start text-sm opacity-80 xxs:flex xxs:gap-4 sm:gap-10 sm:max-w-xl sm:mx-auto">
+              <nav className="mt-6 mb-4 grid gap-2 items-center justify-center text-sm opacity-80 xxs:flex xxs:gap-4 sm:gap-10 sm:max-w-xl sm:mx-auto">
                 <NavLink
                   to="."
                   end
