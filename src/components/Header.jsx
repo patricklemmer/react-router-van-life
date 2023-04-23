@@ -21,8 +21,6 @@ function Header() {
         target={'_blank'}
       >
         <svg
-          // width="60"
-          // height="60"
           viewBox="0 0 250 250"
           className="fill-black text-white absolute top-0 right-0 border-0 w-16 h-16 lg:w-20 lg:h-20"
           aria-hidden="true"
