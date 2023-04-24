@@ -15,11 +15,7 @@ function Income() {
         Last <span class="font-bold">30 days</span>
       </p>
       <h2 class="text-4xl font-bold text-green-500 mb-8">$2,260</h2>
-      <img
-        class="mx-auto"
-        src="../public/income-graph.png"
-        alt="Income graph"
-      />
+      <img class="mx-auto" src="../income-graph.png" alt="Income graph" />
       <div class="mt-12">
         <h3 class="text-2xl font-bold mb-4">Your transactions (3)</h3>
         <p class="mb-6">

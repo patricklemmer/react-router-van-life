@@ -31,11 +31,7 @@ function Reviews() {
           Last <span class="font-bold">30 days</span>
         </p>
       </div>
-      <img
-        class="mx-auto mb-8"
-        src="../public/reviews-graph.png"
-        alt="Review graph"
-      />
+      <img class="mx-auto mb-8" src="../reviews-graph.png" alt="Review graph" />
       <h3 class="text-xl font-bold mb-4">Reviews (2)</h3>
       {reviewsData.map((review) => (
         <div key={review.id} class="mb-8">
