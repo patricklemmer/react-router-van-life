@@ -17,7 +17,7 @@ function Income() {
       <h2 class="text-4xl font-bold text-green-500 mb-8">$2,260</h2>
       <img
         class="mx-auto"
-        src="../src/assets/images/income-graph.png"
+        src="../../public/income-graph.png"
         alt="Income graph"
       />
       <div class="mt-12">
@@ -47,32 +47,3 @@ function Income() {
 }
 
 export default Income;
-
-{
-  /* <section className="">
-<h1>Income</h1>
-<p>
-  Last <span>30 days</span>
-</p>
-<h2>$2,260</h2>
-<img
-  className="gaph"
-  src="../src/assets/images/income-graph.png"
-  alt="Income graph"
-/>
-<div className="">
-  <h3>Your transactions (3)</h3>
-  <p>
-    Last <span>30 days</span>
-  </p>
-</div>
-<div className="">
-  {transactionsData.map((item) => (
-    <div key={item.id} className="">
-      <h3>${item.amount}</h3>
-      <p>{item.date}</p>
-    </div>
-  ))}
-</div>
-</section> */
-}
