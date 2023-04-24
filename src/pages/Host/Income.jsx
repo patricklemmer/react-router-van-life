@@ -17,7 +17,7 @@ function Income() {
       <h2 class="text-4xl font-bold text-green-500 mb-8">$2,260</h2>
       <img
         class="mx-auto"
-        src="../../public/income-graph.png"
+        src="../public/income-graph.png"
         alt="Income graph"
       />
       <div class="mt-12">

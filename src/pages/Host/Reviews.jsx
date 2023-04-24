@@ -33,7 +33,7 @@ function Reviews() {
       </div>
       <img
         class="mx-auto mb-8"
-        src="../../public/reviews-graph.png"
+        src="../public/reviews-graph.png"
         alt="Review graph"
       />
       <h3 class="text-xl font-bold mb-4">Reviews (2)</h3>
